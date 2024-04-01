@@ -11,12 +11,12 @@ document.getElementById('button').addEventListener("click", function(){
 function getConversion(conversion,amount){
   let value = ""; 
   let result = 0; 
-   for(let i = 0; i<conversion.length; i++){
-    if(conversion[i].checked){
-        value = conversion[i].value;
+  for(let convert of conversion){
+    if(convert.checked){
+        value = convert.value;
         result = calculate(value,amount); 
     }
-   }
+  }
    return result; 
 }
 
